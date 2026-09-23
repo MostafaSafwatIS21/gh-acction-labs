@@ -10,4 +10,11 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Wellecon From Workflow"
+      - name: Print wellcome message
+        run: echo "Wellecon From Workflow"
+      - name: Check Repository
+        uses: actions/checkout@v6.1.0
+
+      - name: List Project dir
+        run: ls -la
+      
